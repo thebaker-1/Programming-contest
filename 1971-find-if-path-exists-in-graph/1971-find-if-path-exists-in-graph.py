@@ -4,18 +4,19 @@ class Solution:
         for start,end in edges:
             graph[start].append(end)
             graph[end].append(start)
-        # dfs traversal using stack
-        stack =  [source]
+        # dfs traversal using queue
+        queue = deque()
+        queue.append(source)
         seen = set()
         seen.add(source)
-        while stack:
-            node = stack.pop()
+        while queue:
+            node = queue.popleft()
             if node == destination:
                 return True
             for nei in graph[node]:
                 if nei not in seen:
                     seen.add(nei)
-                    stack.append(nei)
+                    queue.append(nei)
         return False
 
 
