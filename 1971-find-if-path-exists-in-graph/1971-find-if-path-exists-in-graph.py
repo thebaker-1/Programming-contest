@@ -4,7 +4,7 @@ class Solution:
         for start,end in edges:
             graph[start].append(end)
             graph[end].append(start)
-        # dfs traversal using queue
+        # bfs traversal using queue
         queue = deque()
         queue.append(source)
         seen = set()
