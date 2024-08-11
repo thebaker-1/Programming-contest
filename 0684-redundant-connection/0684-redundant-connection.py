@@ -21,11 +21,8 @@ class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         res = []
         uf = UnionFind(len(edges)+1)
-        print(uf.root)
         for u,v in edges:
-            print(1)
             if uf.find(u) != uf.find(v):
-                print(2)
                 uf.union(u,v)
             else:
                 res = [u,v]
