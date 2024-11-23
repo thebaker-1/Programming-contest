@@ -1,11 +1,10 @@
 class Solution:
     def differenceOfSums(self, n: int, m: int) -> int:
-        num1 = 0
-        num2 = 0
+        res = 0
         for i in range(1,n+1):
             if i % m:
-                num2+=i
+                res+=i
             else:
-                num1+=i
-        return (num2 - num1)
+                res-=i
+        return res
         
