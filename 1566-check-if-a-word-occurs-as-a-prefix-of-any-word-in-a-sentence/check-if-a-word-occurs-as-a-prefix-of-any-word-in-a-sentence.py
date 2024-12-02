@@ -5,6 +5,5 @@ class Solution:
         for i in range(len(words)):
             if len(words[i])>=word_len and searchWord == words[i][:word_len]:
                 return i+1
-
         return -1
         
