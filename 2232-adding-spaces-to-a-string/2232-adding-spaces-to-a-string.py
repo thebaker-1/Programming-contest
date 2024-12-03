@@ -4,7 +4,7 @@ class Solution:
         index = 0
         for space in spaces:
             arr.append(s[index:space])
-            index=space
+            index=space             
         arr.append(s[index:]) 
         return " ".join(arr)
         
